@@ -45,32 +45,32 @@ void cocktail_sort_list(listint_t **list)
 		return;
 	current = (*list);
 	do {
-			swop = 0;
-			while (current->next)
+		swop = 0;
+		while (current->next)
+		{
+			next_node = current->next;
+			if (next_node && current->n > next_node->n)
 			{
-				next_node = current->next;
-				if (next_node && current->n > next_node->n)
-				{
-					swap(current, next_node, list);
-					swop = 1;
-					print_list((*list));
-				}
-				else
-					current = current->next;
+				swap(current, next_node, list);
+				swop = 1;
+				print_list((*list));
 			}
-			current = current->prev;
-			while (current->prev)
+			else
+				current = current->next;
+		}
+		current = current->prev;
+		while (current->prev)
+		{
+			next_node = current->prev;
+			if (next_node && current->n < next_node->n)
 			{
-				next_node = current->prev;
-				if (next_node && current->n < next_node->n)
-				{
-					swap(next_node, current, list);
-					swop = 1;
-					print_list((*list));
-				}
-				else
-					current = current->prev;
+				swap(next_node, current, list);
+				swop = 1;
+				print_list((*list));
 			}
-			current = current->next;
+			else
+				current = current->prev;
+		}
+		current = current->next;
 	} while (swop);
 }
