@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - swaps nodes in the list 
+ * swap - swaps nodes in the list
  * @pre: previous (first) node
  * @current: current (second) node
  * @list: list with nodes to be swapped
