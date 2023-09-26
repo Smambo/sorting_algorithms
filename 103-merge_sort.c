@@ -49,7 +49,8 @@ void recursive_merge_sort(int *array, int *tmp_array, size_t l, size_t r)
 
 	for (i = l; i < r; i++)
 	{
-		if (((l_side < mid) && (r_side == r)) || (array[l_side] < array[r_side]))
+		if ((l_side < mid) && ((r_side == r) ||
+					(array[l_side] < array[r_side])))
 		{
 			tmp_array[i] = array[l_side];
 			l_side++;
