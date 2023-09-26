@@ -31,5 +31,9 @@ void recursive_quick_sort(int *array, int start, int end, int size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void swap(listint_t *pre, listint_t *current, listint_t **list);
+void counting_sort(int *array, size_t size);
+void print(int *array, char *side, size_t start, size_t end);
+void recursive_merge_sort(int *array, int *tmp_array, size_t l, size_t r);
+void merge_sort(int *array, size_t size);
 
 #endif /* SORT_H */
