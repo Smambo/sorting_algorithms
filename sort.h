@@ -35,5 +35,8 @@ void counting_sort(int *array, size_t size);
 void print(int *array, char *side, size_t start, size_t end);
 void recursive_merge_sort(int *array, int *tmp_array, size_t l, size_t r);
 void merge_sort(int *array, size_t size);
+int hoare_partition(int *array, int low, int high, int size);
+void qs_helper(int *array, int low, int high, int size);
+void quick_sort_hoare(int *array, size_t size);
 
 #endif /* SORT_H */
